@@ -9,6 +9,11 @@ var taskFormHandler = function(event) {
     name: taskNameInput,
     type:taskTypeInput
   };
+  if(!taskNameInput || !taskTypeInput){
+    formEl.reset();
+    alert("You need to fill out the task form!");
+    return false;
+  }
   createTaskEl(taskDataObj);
 }; 
 
